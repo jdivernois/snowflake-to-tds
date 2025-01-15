@@ -20,9 +20,6 @@ def create_and_publish_datasource(datasource_name=None):
     if not datasource_name:
         datasource_name = "Snowflake_Datasource"
 
-    snowflake_service = os.getenv('SNOWFLAKE_SERVICE')
-    snowflake_warehouse = os.getenv('SNOWFLAKE_WAREHOUSE')
-
     try:
         # Create TDS file content
         tds_content = f"""<?xml version='1.0' encoding='utf-8' ?>
